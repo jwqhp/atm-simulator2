@@ -1,3 +1,12 @@
+def get_cash(balance):
+    g_c = int(input())
+    if balance - g_c >= 0:
+        balance -= g_c
+        print("Снято с баланса ", g_c)
+    else:
+        print("Недостаточно средств")
+    return balance
+
 def main():
     balance = 0
     while True:
@@ -6,7 +15,7 @@ def main():
         if choice == 1:
             print("Текущий баланс: ", balance)
         elif choice == 2:
-            
+            get_cash(balance)
         elif choice == 3:
             
         elif choice == 4:
